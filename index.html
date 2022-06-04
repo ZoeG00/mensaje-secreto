@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">  
+  <head>    
+    <title>Encriptador de texto</title>    
+    <meta charset="UTF-8">
+    <meta name="title" content="Encriptador de texto">
+    <meta name="description" content="App para encriptar o desencriptar un mensaje"> 
+    <link href="imagenes/icono.png" rel="icon" type="icon">   
+    <link href="reset.css" rel="stylesheet" type="text/css"/> 
+    <link href="style.css" rel="stylesheet" type="text/css"/>    
+  </head>  
+  <body>   
+    <form>
+      <section id="seccion-encriptar">
+         <p>*Solo letras minusculas y sin acentos</p>
+         <input id="entrada" name="entrada" rows="10" cols="50" placeholder="Escribe el texto aquí" type="text" required ></input><br>
+         <input type="button" id="boton-encriptar" class="boton-encriptar" value="Encriptar" ></input>
+         <input type="button" id="boton-desencriptar" value="Desencriptar" ></input>
+      </section> 
+
+      <section id="seccion-desencriptar">
+        <input id="salida" name="salida" rows="10" cols="50" readonly="true"></input><br>
+        <input type="button" id="boton-copiar" value="Copiar" ></input>
+      </section>
+    </form>
+      <section>
+        <dialog open id="notfound">
+          <img src="imagenes/niña-con-lupa.png"  alt="no se encontro texto" height="180px" width="370px">
+          <h4>Ningún mensaje fue encontrado</h4>
+          <p>ingrese el texto que desea encriptar o desencriptar</p>
+        </dialog>
+     </section>
+     <section>
+        <dialog id="ventana">
+          <img src="imagenes/guiño.png" alt="cara guiñando" height="100px" width="100px">
+          <p>¡Mensaje copiado!</p>
+          <button id="boton-cerrar">Cerrar</button>
+        </dialog>
+      </section>
+
+    <footer>
+      <h4>Hecho con amor por Zoe💛</h4>
+      <h4>Contacto: zoeguzman.ok@gmail.com</h4>
+      <h4>2022©</h4>
+      <a href="https://www.linkedin.com/in/zoe-guzman-0449b9229/"><img src="imagenes/linkedin-logo.png" height="30px" width="30px"></a>
+      <a href="https://github.com/ZoeG00"><img src="imagenes/github-logo.png" height="35px" width="38px"></a>
+    </footer>
+  </body> 
+  <script type="text/javascript" src="desencriptar.js"></script> 
+  <script type="text/javascript" src="encriptar.js"></script>
+  <script type="text/javascript" src="copiar.js"></script>
+</html>
