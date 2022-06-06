@@ -11,17 +11,15 @@ function encriptar() {
 // voltear tarjeta mensaje no encotrado
 //encriptar con el boton, reset
 const notfound = document.getElementById("notfound");
-var boton = document.getElementById("boton-encriptar");
-boton.onclick = function () {    
+var btnencriptar = document.getElementById("boton-encriptar");
+btnencriptar.onclick = function () {    
     if(document.getElementById("entrada").value.match(/^[a-z ]*$/)) {
         encriptar()
-        if(document.getElementById("entrada").value){
-            notfound.remove();
-                }
+            notfound.remove();       
     } else {
         alert("No se permiten caracteres especiales");
     }
-boton.onclick = document.getElementById("entrada").value =" ";
+btnencriptar.onclick = document.getElementById("entrada").value =" ";
 }
 
          

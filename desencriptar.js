@@ -9,13 +9,16 @@ function desencriptar() {
         .replace(/ufat/gi, "u");
     document.getElementById("salida").value = texto;
 }
-
-var boton = document.getElementById("boton-desencriptar");
-boton.onclick = function () {
+const imagen = document.getElementById("notfound");
+var btndesencriptar = document.getElementById("boton-desencriptar");
+btndesencriptar.onclick = function () {
     if(document.getElementById("entrada").value.match(/^[a-z ]*$/)) {
-        desencriptar();
+        desencriptar()
+        if(document.getElementById("entrada").value){
+            imagen.remove();}
     } else {
         alert("No se permiten caracteres especiales")
     }
-boton.onclick = document.getElementById("entrada").value =" ";
-};
+btndesencriptar.onclick = document.getElementById("entrada").value =" ";
+}
+
