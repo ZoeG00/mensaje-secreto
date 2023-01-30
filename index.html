@@ -1,52 +1,60 @@
 <!DOCTYPE html>
-<html lang="es">  
-  <head>    
-    <title>Encriptador de texto</title>    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <meta name="description" content="App para encriptar o desencriptar un mensaje"> 
-    <link href="imagenes/icono.png" rel="icon" type="icon">   
-    <link href="reset.css" rel="stylesheet" type="text/css"/> 
-    <link href="style.css" rel="stylesheet" type="text/css"/>    
-  </head>  
-  <body>   
-    <form>
-      <section id="seccion-encriptar">
-         <p>*Solo letras minusculas y sin acentos</p>
-         <input id="entrada" name="entrada" rows="10" cols="50" placeholder="Escribe el texto aquí" type="text" required ></input><br>
-         <input type="button" id="boton-encriptar" class="boton-encriptar" value="Encriptar" ></input>
-         <input type="button" id="boton-desencriptar" value="Desencriptar" ></input>
-      </section> 
+<html lang="es">
 
-      <section id="seccion-desencriptar">
-        <input id="salida" name="salida" rows="10" cols="50" readonly="true"></input><br>
-        <input type="button" id="boton-copiar" value="Copiar" ></input>
-      </section>
-    </form>
-      <section id="niña-con-lupa">
-        <dialog open id="notfound">
-          <img src="imagenes/niña-con-lupa.png"  alt="no se encontro texto" height="180px" width="370px">
-          <h4>Ningún mensaje fue encontrado</h4>
-          <p>ingrese el texto que desea encriptar o desencriptar</p>
-        </dialog>
-     </section>
-     <section>
-        <dialog id="ventana">
-          <img src="imagenes/guiño.png" alt="cara guiñando" height="100px" width="100px">
-          <p>¡Mensaje copiado!</p>
-          <button id="boton-cerrar">Cerrar</button>
-        </dialog>
-      </section>
+<head>
+  <title>Secretio | Mensaje Secreto</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="App para encriptar o desencriptar un mensaje secreto">
+  <link href="img/guiño.png" rel="icon" type="icon">
+  <link href="styles/reset.css" rel="stylesheet" type="text/css" />
+  <link href="styles/styles.css" rel="stylesheet" type="text/css" />
+</head>
 
-    <footer>
-      <h4>Hecho con amor por Zoe💛</h4>
-      <h4>Contacto: zoeguzman.ok@gmail.com</h4>
-      <h4>2022©</h4>
-      <a href="https://www.linkedin.com/in/zoe-guzman-0449b9229/"><img src="imagenes/linkedin-logo.png" height="30px" width="30px"></a>
-      <a href="https://github.com/ZoeG00"><img src="imagenes/github-logo.png" height="35px" width="38px"></a>
-    </footer>
-  </body> 
-  <script type="text/javascript" src="desencriptar.js"></script> 
-  <script type="text/javascript" src="encriptar.js"></script>
-  <script type="text/javascript" src="copiar.js"></script>
+<body>
+  <div id="titulo-principal"><a href="https://fontmeme.com/es/fuente-del-logotipo-de-twitch/"><img
+        src="https://fontmeme.com/permalink/230130/e722b2bf430d327feea8b7737f026ad0.png"
+        alt="fuente-del-logotipo-de-twitch" height="100%" width="100%"></a></div>
+  <div>
+    <div id="seccion-encriptar">
+      <p id="subtitulo">*Solo letras minúsculas, sin acentos y carácteres especiales</p>
+      <textarea id="entrada" name="entrada" rows="10" cols="50" placeholder="Escribe el texto aquí" type="text"
+        required></textarea>
+      <div>
+        <input type="button" class="boton" id="boton-encriptar" name="boton-encriptar" value="Encriptar"></input>
+        <input type="button" class="boton" id="boton-desencriptar" name="boton-desencriptar"
+          value="Desencriptar"></input>
+      </div>
+    </div>
+    <div id="seccion-desencriptar">
+      <textarea id="salida" name="salida" rows="10" cols="50" readonly="true"></textarea>
+      <div>
+        <input type="button" class="boton" id="boton-copiar" name="boton-copiar" value="Copiar"></input>
+        <input type="button" class="boton" id="nuevo-mensaje" name="nuevo-mensaje" value="Nuevo Mensaje"></input>
+      </div>
+    </div>
+  </div>
+  <footer>
+    <p>Hecho con amor por Zoe💜</p>
+    <p>Contacto: zoeguzman.ok@gmail.com</p>
+    <p>2022©</p>
+    <div class="redes">
+      <a href="https://www.linkedin.com/in/zoe-guzman-0449b9229/" link text="perfil de linkedin"><img id="linkedin-logo"
+          src="img/linkedin-logo.svg" alt="linkedin logo" height="30vh" width="30vw"></a>
+      <a href="https://github.com/ZoeG00" link text="perfil de github"><img id="github-logo" src="img/github-logo.svg"
+          alt="github logo" height="30vh" width="30vw"> </a>
+    </div>
+  </footer>
+</body>
+<dialog open id="niña-con-lupa">
+  <img src="img/niña-con-lupa.png" alt="no se encontro texto" height="100vh" width="200vw">
+  <p>no se encuentra mingún mensaje</p>
+</dialog>
+<dialog close id="ventana">
+  <img src="img/guiño.png" alt="cara guiñando" height="50vh" width="50vw">
+  <p>¡Mensaje copiado!</p>
+  <button class="boton" id="boton-cerrar">Cerrar</button>
+</dialog>
+<script type="text/javascript" src="src/funciones.js"></script>
+
 </html>

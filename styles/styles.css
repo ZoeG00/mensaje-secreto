@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: #ffb121;
+}
+
+.boton:active {
+    color: #aa59cf;
+}
+
+.boton {
+    background-color: black;
+    color: #fff;
+    border-radius: 15px;
+    font-family: 'Press Start 2P', cursive;
+    height: 5vh;
+    font-size: x-small;
+}
+
+/*Mobile Responsive */
+@media screen and (max-width: 480px) {
+
+    #titulo-principal {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 10vh;
+        margin: 10px
+    }
+
+    #subtitulo {
+        font-size: xx-small;
+        text-align: center;
+    }
+
+    #seccion-encriptar,
+    #seccion-desencriptar {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 35vh;
+    }
+
+    #entrada,
+    #salida {
+        width: 70vw;
+        border-radius: 15px;
+    }
+
+    #ventana {
+        background-color: #aa59cf;
+        border-radius: 80px;
+        bottom: 50vh;
+        display: flex;
+        align-items: center;
+        width: 70vw;
+    }
+
+    #niña-con-lupa {
+        background-color: #fff;
+        border-radius: 15px;
+        width: 62vw;
+        height: 20vh;
+        bottom: 25vh;
+        display: flex;
+        justify-content: flex-end;
+        align-content: center;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    #niña-con-lupa p {
+        font-size: xx-small;
+        text-transform: uppercase;
+        text-align: center;
+    }
+
+    footer {
+        background-color: black;
+        color: #fff;
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+        font-size: xx-small;
+        line-height: 20px;
+    }
+}
+
+/*Tablet Responsive */
+@media screen and (min-width: 640px) and (max-width: 1023px) {}
